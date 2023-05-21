@@ -1,13 +1,17 @@
-import { Home } from "./views/home";
+import { Provider } from 'react-redux';
+import { Discovery } from "./views/Discovery";
+import { store } from './store/store';
 
 
 function App() {
   return (
-    <div className="App">
-      <main>
-        <Home/>
-      </main>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <main>
+          <Discovery />
+        </main>
+      </div>
+    </Provider>
   );
 }
 
