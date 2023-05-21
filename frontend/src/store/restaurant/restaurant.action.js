@@ -5,7 +5,7 @@ import { SET_RESTAURENTS, SET_IS_LOADING} from "./restaurant.reducer"
 export async function loadRestaurants() {
     try {
         store.dispatch({ type: SET_IS_LOADING, isLoading: true })
-        const restaurants = await SET_RESTAURENTS.query()
+        const restaurants = await restauranstService.query()
         store.dispatch({ type: SET_RESTAURENTS, restaurants })
     } catch (err) {
         console.log('Had issues loading restaurants', err)

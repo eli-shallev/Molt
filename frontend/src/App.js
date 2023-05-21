@@ -6,8 +6,8 @@ import { store } from './store/store';
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <main>
+      <div className="main-layout app">
+        <main className='main-layout'>
           <Discovery />
         </main>
       </div>

@@ -17,10 +17,11 @@ async function query() {
 }
 
 function _createDemoData() {
-    let restauranst = utilService.loadFromStorage(DB_KEY)
-    if (!restauranst || !restauranst.length) {
-        restauranst = [
+    let restauransts = utilService.loadFromStorage(DB_KEY)
+    if (!restauransts || !restauransts.length) {
+        restauransts = [
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -48,6 +49,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -75,6 +77,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -102,6 +105,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -129,6 +133,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -156,6 +161,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -183,6 +189,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -210,6 +217,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -237,6 +245,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -264,6 +273,7 @@ function _createDemoData() {
 
             },
             {
+                _id: utilService.makeId(),
                 title: 'mhooka',
                 description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
@@ -292,4 +302,5 @@ function _createDemoData() {
             }
         ]
     }
+    utilService.saveToStorage(DB_KEY,restauransts)
 }
