@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { Discovery } from "./views/Discovery";
 import { store } from './store/store';
 
 
