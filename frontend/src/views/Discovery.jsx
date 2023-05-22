@@ -9,7 +9,8 @@ export function Discovery() {
         loadRestaurants()
     }, [])
     return (
-        <div className="Discovery">
+        <div className="discovery">
+            
             {isLoading && <span>loading...</span>}
             {(!isLoading && restaurants) && (
                 <ul>
