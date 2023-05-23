@@ -11,18 +11,16 @@ export function HeaderDesktop() {
 
     function handleScroll() {
         setScrollY(window.scrollY)
-        console.log(scrollY)
     }
 
     useEffect(() => {
         handleScroll()
         window.addEventListener('scroll', handleScroll)
-
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-
     }, [window.scrollY])
+
     return (
         <header className=" main-layout full header-desktop">
             <div className="header-left">

@@ -1,6 +1,8 @@
 .nav-bar {
     position: fixed;
     bottom: 0;
+    left: 0;
+    margin: 0 auto;
     border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
@@ -8,20 +10,6 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     padding: 4px 0;
-
-
-
-    span {
-        font-size: 10px;
-    }
-
-    svg {
-        width: 20px;
-    }
-
-    .profile-icon {
-        font-size: 20px;
-    }
 
     a {
         display: flex;
@@ -32,6 +20,18 @@
 
         &.active {
             color: $clr2;
+        }
+
+        span {
+            font-size: 10px;
+        }
+    
+        svg {
+            width: 20px;
+        }
+    
+        .profile-icon {
+            font-size: 20px;
         }
     }
 
@@ -59,12 +59,12 @@
                 color: $clr1;
                 background-color: $clr2;
             }
-        }
 
-        span {
-            padding-left: 8px;
-            font-size: 14px;
-            font-weight: 500;
+            span {
+                padding-left: 8px;
+                font-size: 14px;
+                font-weight: 500;
+            }
         }
 
         .nav-search,

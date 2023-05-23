@@ -1,17 +1,15 @@
-import { useEffect } from "react"
-import { loadRestaurants } from "../store/restaurant/restaurant.action"
+
 import { useSelector } from "react-redux"
+import { Loader } from "../cmps/loader"
 
 export function Discovery() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
     const isLoading = useSelector((storeState) => storeState.restaurantModule.isLoading)
-    useEffect(() => {
-        loadRestaurants()
-    }, [])
+
     return (
         <div className="discovery">
             
-            {isLoading && <span>loading...</span>}
+            {isLoading && <Loader/>}
             {(!isLoading && restaurants) && (
                 <ul>
                     {restaurants.map(restaurant => {
