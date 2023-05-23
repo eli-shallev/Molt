@@ -1,16 +1,33 @@
 import { FiSearch } from 'react-icons/fi';
 import { VscHome } from 'react-icons/vsc';
 import { BiChevronDown } from 'react-icons/bi';
+import { useEffect, useState } from 'react';
 
 
 
 export function HeaderDesktop() {
 
+    const [scrollY, setScrollY] = useState()
+
+    function handleScroll() {
+        setScrollY(window.scrollY)
+        console.log(scrollY)
+    }
+
+    useEffect(() => {
+        handleScroll()
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+
+    }, [window.scrollY])
     return (
         <header className=" main-layout full header-desktop">
             <div className="header-left">
                 <img src={require("../assets/images/molt-b&w-logo.png")} alt="Molt logo" className="header-logo" />
-                <div className="header-delivery">
+                <div className={scrollY > 100 ? 'header-delivery scrolled' : 'header-delivery'}>
                     <div className="header-adderss-label">
                         <VscHome />
                     </div>

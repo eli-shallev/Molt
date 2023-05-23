@@ -2,7 +2,7 @@
     display: flex;
     height: 60px;
     align-items: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgrey;
     font-size: 14px;
     max-width: 1400px;
     margin: 0 auto;
@@ -26,7 +26,29 @@
             display: flex;
             align-items: center;
             flex-grow: 1;
+            background-color: $clr1;
             cursor: pointer;
+            position: absolute;
+            padding: 14px 0 ;
+            top:60px;
+            left: 0;
+            padding-left: 1.25rem;
+            border-bottom: 1px solid lightgrey;
+            width: 100%;
+            transition: all 1s ;
+
+            &.scrolled{
+                transform: translateY(-60px);
+                opacity: 0;
+            }
+
+            @include for-wide-layout(){
+                transform: translateY(0) !important;
+                opacity: 1 !important;
+                position: static;
+                padding: 0;
+                border: none;
+            }
 
             &:hover {
                 .header-adderss-label {
@@ -133,7 +155,6 @@
             }
 
             .header-user-img-container {
-                // width: 50px;
                 border-radius: 50%;
                 border: 2px solid $clr1;
                 display: flex;
