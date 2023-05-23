@@ -8,7 +8,10 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
     width: 100%;
     padding: 4px 0;
-    span{
+
+
+
+    span {
         font-size: 10px;
     }
 
@@ -16,21 +19,58 @@
         width: 20px;
     }
 
-    .profile-icon{
+    .profile-icon {
         font-size: 20px;
     }
 
-    a{
+    a {
         display: flex;
         flex-direction: column;
         align-items: center;
         flex-basis: 20%;
         color: $clr6;
 
-        &.active{
+        &.active {
             color: $clr2;
         }
     }
 
-    .nav-restaurants {}
+    @include for-normal-layout() {
+        position: static;
+        box-shadow: none;
+        border: none;
+        width: 50%;
+        padding: 24px 0 !important;
+        gap: 8px;
+
+        a {
+            flex-basis: 33%;
+            flex-direction: row;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 0;
+
+            &:hover:not(.active) {
+                box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+            }
+
+            &.active {
+                color: $clr1;
+                background-color: $clr2;
+            }
+        }
+
+        span {
+            padding-left: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-search,
+        .nav-profile {
+            display: none;
+        }
+    }
+
 }

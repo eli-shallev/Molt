@@ -14,9 +14,8 @@ function App() {
       <Router>
         <div className="main-layout app">
           <HeaderDesktop />
-          <NavBar />
-
           <main className='main-layout'>
+          <NavBar />
             <Routes>
               <Route path="/" element={<Discovery />} />
               <Route path="/discovery" element={<Discovery />} />
