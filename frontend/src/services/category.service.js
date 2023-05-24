@@ -25,8 +25,8 @@ function _createDemoData() {
                 title: 'kosher',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862255/molts/categories/kosher_s5p9jz.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -35,8 +35,8 @@ function _createDemoData() {
                 title: 'asian',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862253/molts/categories/asian_tgcjjk.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -45,8 +45,8 @@ function _createDemoData() {
                 title: 'kosher',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862255/molts/categories/kosher_s5p9jz.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -55,8 +55,8 @@ function _createDemoData() {
                 title: 'asian',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862253/molts/categories/asian_tgcjjk.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -65,8 +65,8 @@ function _createDemoData() {
                 title: 'kosher',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862255/molts/categories/kosher_s5p9jz.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -75,8 +75,8 @@ function _createDemoData() {
                 title: 'asian',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862253/molts/categories/asian_tgcjjk.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -85,8 +85,8 @@ function _createDemoData() {
                 title: 'kosher',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862255/molts/categories/kosher_s5p9jz.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -95,8 +95,8 @@ function _createDemoData() {
                 title: 'asian',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862253/molts/categories/asian_tgcjjk.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -105,8 +105,8 @@ function _createDemoData() {
                 title: 'kosher',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862255/molts/categories/kosher_s5p9jz.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },
@@ -115,8 +115,8 @@ function _createDemoData() {
                 title: 'asian',
                 imgUrl: 'https://res.cloudinary.com/dxajfza46/image/upload/v1684862253/molts/categories/asian_tgcjjk.avif',
                 restaurants: [
-                    'Z1OoRA',
-                    '1CF4qK'
+                    'mres1',
+                    'mres2'
                 ]
 
             },

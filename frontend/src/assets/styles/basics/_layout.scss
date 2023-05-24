@@ -7,18 +7,18 @@
 
     >*:not(.full) {
         margin: 0 auto;
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
+        padding-left: $padding-mobile;
+        padding-right: $padding-mobile;
         max-width: 1400px;
 
         @include for-normal-layout(){
-            padding-left: 1.2rem;
-            padding-right: 1.2rem;
+            padding-left: $padding-normal;
+            padding-right:$padding-normal;
         }
 
         @include for-wide-layout() {
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
+            padding-left: $padding-wide;
+            padding-right: $padding-wide;
         }
     }
 }
