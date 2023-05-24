@@ -11,9 +11,9 @@
         padding-right: $padding-mobile;
         max-width: 1400px;
 
-        @include for-normal-layout(){
+        @include for-normal-layout() {
             padding-left: $padding-normal;
-            padding-right:$padding-normal;
+            padding-right: $padding-normal;
         }
 
         @include for-wide-layout() {
@@ -31,7 +31,7 @@
     main {
         flex-grow: 1;
         width: 100%;
-        padding-top: 130px;
+        padding-top: 120px;
 
         @include for-wide-layout() {
             padding-top: 60px;

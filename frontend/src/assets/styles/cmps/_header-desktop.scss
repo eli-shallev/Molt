@@ -1,13 +1,21 @@
+.header-desktop-container{
+    display: flex;
+    justify-content: center;
+    max-width: 2000px !important;
+    border-bottom: 1px solid lightgray;
+    background-color: $clr1;
+    height: 60px;
+    position: fixed;
+}
+
 .header-desktop {
     display: flex;
     height: 60px;
     align-items: center;
-    border-bottom: 1px solid lightgrey;
-    // font-size: 14px;
     max-width: 1400px;
     margin: 0 auto;
-    position: fixed;
-    background-color: $clr1;
+    // position: fixed;
+    width: 100%;
 
     .header-left {
         display: flex;
@@ -29,20 +37,21 @@
             background-color: $clr1;
             cursor: pointer;
             position: absolute;
-            padding: 14px 0 ;
-            top:60px;
+            padding: 10px 0;
+            top: 60px;
             left: 0;
             padding-left: 1.25rem;
             border-bottom: 1px solid lightgrey;
+            box-shadow: 10px 0 -10px 0 $clr1;
             width: 100%;
-            transition: all 1s ;
+            transition:all 1s;
 
-            &.scrolled{
+            &.scrolled {
                 transform: translateY(-60px);
                 opacity: 0;
             }
 
-            @include for-wide-layout(){
+            @include for-wide-layout() {
                 transform: translateY(0) !important;
                 opacity: 1 !important;
                 position: static;
@@ -111,7 +120,7 @@
             height: 35px;
             padding-left: 16px;
 
-            &:hover{
+            &:hover {
                 background-color: $clr10;
             }
 
@@ -146,11 +155,11 @@
             background-color: $clr8;
             justify-content: space-around;
             width: 64px;
-            padding: 2px;
+            padding: 2px 1px;
             font-size: 2em;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background-color: $clr7;
             }
 
@@ -161,7 +170,7 @@
                 align-items: center;
 
                 img {
-                    width: 35px;
+                    width: 26.5px;
                 }
             }
         }

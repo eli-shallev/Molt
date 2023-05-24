@@ -7,11 +7,13 @@
     .item-list-header {
         display: flex;
         justify-content: space-between;
-        padding: 8px 0;
+        padding-top:14px;
+        align-items: center;
 
         .item-list-title {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 600;
+            font-family: Omnes-Medium;
         }
 
         .item-list-btns {
@@ -69,7 +71,7 @@
         gap: $list-gap;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        padding: 4px 0;
+        padding: 14px 30px 7px;
         scroll-behavior: smooth;
 
         &::-webkit-scrollbar {

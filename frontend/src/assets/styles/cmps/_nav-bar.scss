@@ -40,7 +40,7 @@
         box-shadow: none;
         border: none;
         width: 50%;
-        padding: 24px 0 !important;
+        padding: 21px 0 !important;
         gap: 8px;
 
         a {
@@ -62,7 +62,7 @@
 
             span {
                 padding-left: 8px;
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 500;
             }
         }
@@ -70,6 +70,14 @@
         .nav-search,
         .nav-profile {
             display: none;
+        }
+    }
+
+    @include for-wide-layout(){
+        a{
+            span{
+                font-size: 14px;
+            }
         }
     }
 

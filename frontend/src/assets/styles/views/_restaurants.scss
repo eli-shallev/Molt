@@ -1,3 +1,42 @@
-.restaurants{
-    padding: 0 !important;
+.restaurants {
+    padding: 28px 0 !important;
+
+    .restauranst-title-container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 17.5px;
+
+        .restaurants-title {
+            font-family: Omnes-Bold;
+            font-size: 40.25px;
+        }
+
+        .fillter-container {
+            display: flex;
+            gap: 4px;
+            color: $clr2;
+            align-items: end;
+            width: max-content;
+            &:hover{
+                .fillter-icon-container{
+                    background-color: $clr9;
+                }
+            }
+
+            .fillter-title {
+                font-weight: 550;
+                padding: 8px 0;
+                cursor: pointer;
+            }
+
+            .fillter-icon-container {
+                width: 32px;
+                height: 32px;
+                padding: 6.4px;
+                background-color: $clr3;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
 }
