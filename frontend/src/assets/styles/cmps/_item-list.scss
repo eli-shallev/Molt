@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
 
-
     .item-list-header {
         display: flex;
         justify-content: space-between;
@@ -45,24 +44,22 @@
             }
 
             .see-all-btn {
-                @include for-normal-layout() {
-                    display: none;
-                }
-
                 border: none;
                 border-radius: 4px;
                 color: $clr2;
                 font-weight: 600;
-
+                padding: 4px;
                 background-color: $clr3;
                 transition: background-color 0.2s;
+
+                @include for-normal-layout() {
+                    display: none;
+                }
 
                 &:hover {
                     background-color: $clr9;
                 }
-
             }
-
         }
     }
 
@@ -71,12 +68,11 @@
         gap: $list-gap;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        padding: 14px 30px 7px;
+        padding: 14px 0 7px 0;
         scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
             display: none;
         }
-
     }
 }

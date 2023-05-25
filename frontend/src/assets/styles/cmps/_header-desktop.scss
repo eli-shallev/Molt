@@ -118,7 +118,7 @@
             align-items: center;
             border-radius: 1.25rem;
             height: 35px;
-            padding-left: 16px;
+            padding-left: 14px;
 
             &:hover {
                 background-color: $clr10;
@@ -128,15 +128,29 @@
                 border: 2px solid $clr2;
             }
 
+            .search-icon-container{
+                width: 14px;
+                height: 14px;
+            }
+
             input {
                 flex-grow: 1;
                 border: none;
                 background: none;
                 padding-left: 4px;
                 caret-color: $clr2;
+                padding-left: 8px;
 
                 &:focus {
                     outline: none;
+                }
+
+                &::placeholder{
+                    font-size: 12px;
+                    color: $clr6;
+                    font-weight: 400;
+                    opacity: 0.75;
+
                 }
             }
         }

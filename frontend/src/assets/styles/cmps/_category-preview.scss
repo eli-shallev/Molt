@@ -6,14 +6,14 @@
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.125rem 0px, rgba(0, 0, 0, 0.12) 0px 0.125rem 0.125rem 0px;
     transition: box-shadow 0.3s cubic-bezier(0.45, 0, 0.55, 1) 0s, background 100ms ease-out 0s;
-    min-width: calc((100vw - $padding-mobile * 2 - $list-gap * 2) / 3 );
+    min-width: calc((100% - $list-gap * 2) / 3 );
     scroll-snap-align: start;
 
     @include for-normal-layout(){
-        min-width: calc((100vw - $padding-normal * 2 - $list-gap * 3) / 4 );
+        min-width: calc((100% - $list-gap * 3) / 4 );
     }
     @include for-wide-layout(){
-        min-width: calc((100vw - $padding-wide * 2 - $list-gap * 4) / 5 );
+        min-width: calc((100% - $list-gap * 4) / 5 );
     }
 
     &:hover {

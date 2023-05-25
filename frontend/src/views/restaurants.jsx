@@ -12,7 +12,7 @@ export function Restaurants() {
                 (<div className="restaurants">
                     <div className="restauranst-title-container">
                         <span className="restaurants-title">
-                            Restaurants near me
+                            Restaurants <span className="restaurants-title-tail">near me</span>
                         </span>
                         <div className="fillter-container">
                             <span className="fillter-title">Sorted by <strong>Recommended</strong></span>
