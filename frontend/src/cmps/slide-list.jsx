@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { CategoryPreview } from "./category-preview"
 
-export function ItemList({ title, items, type }) {
+export function SlideList({ title, items, type }) {
 
     const listRef = useRef()
 
@@ -14,12 +14,12 @@ export function ItemList({ title, items, type }) {
     }
 
     return (
-        <div className="item-list">
-            <div className="item-list-header">
-                <span className="item-list-title">
+        <div className="slide-list">
+            <div className="slide-list-header">
+                <span className="slide-list-title">
                     {title}
                 </span>
-                <div className="item-list-btns">
+                <div className="slide-list-btns">
                     <button onClick={scrollPrev} className="prev-btn">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M22.533 10.526H5.422a.251.251 0 01-.165-.438l4.637-3.6a1.44 1.44 0 00-1.9-2.162L.813 10.165a2.4 2.4 0 000 3.6l7.179 5.837a1.44 1.44 0 001.9-2.161l-4.637-3.6a.251.251 0 01.165-.438h17.113a1.44 1.44 0 000-2.88v.003z"></path>
@@ -33,9 +33,9 @@ export function ItemList({ title, items, type }) {
                     <button className="see-all-btn">See all</button>
                 </div>
             </div>
-            <div ref={listRef} className={`item-list-container ${type}`}>
-                {items.map((item, i) => {
-                    if (type === 'category') return <CategoryPreview key={item._id} category={item} num={i} />
+            <div ref={listRef} className={`slide-list-container ${type}`}>
+                {items.map(item => {
+                    if (type === 'category') return <CategoryPreview key={item._id} category={item} />
                     else if (type === 'restaurant') return <div>g</div>
                     else return <div></div>
                 })}

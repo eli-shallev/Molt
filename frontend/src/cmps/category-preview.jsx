@@ -1,4 +1,4 @@
-export function CategoryPreview({ category, num }) {
+export function CategoryPreview({ category }) {
 
 
     return (
@@ -9,7 +9,7 @@ export function CategoryPreview({ category, num }) {
                     {category.title}
                 </span>
                 <span className="category-counter">
-                    {`${category.restaurants.length} places ${num}`}
+                    {`${category.restaurants.length} places`}
                 </span>
             </div>
         </div>

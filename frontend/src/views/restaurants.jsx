@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
-import { ItemList } from "../cmps/item-list";
+import { SlideList } from "../cmps/slide-list";
 import { Loader } from "../cmps/loader";
+import { FullList } from "../cmps/full-list";
 
 export function Restaurants() {
+    const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
     const categories = useSelector((storeState) => storeState.categoryModule.categories)
     const isLoading = useSelector((storeState) => storeState.restaurantModule.isLoading)
     return (
@@ -23,7 +25,8 @@ export function Restaurants() {
                             </div>
                         </div>
                     </div>
-                    <ItemList title='I fell like eating..' items={categories} type='category' />
+                    <SlideList title='I fell like eating..' items={categories} type='category' />
+                    <FullList title='All restaurants' items={restaurants} type='restaurant' />
                 </div>)}
         </>
     )
