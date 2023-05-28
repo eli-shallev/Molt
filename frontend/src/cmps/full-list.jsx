@@ -1,5 +1,5 @@
 import { CategoryPreview } from "./category-preview"
-import { RestaurantsPreview } from "./restaurants-preview"
+import { RestaurantPreview } from "./restaurant-preview"
 
 export function FullList({title,items,type}){
 
@@ -11,7 +11,7 @@ export function FullList({title,items,type}){
             <div className={`full-list-container ${type}`}>
                 {items.map(item=>{
                     if(type==='category') return <CategoryPreview key={item._id} category={item}/>
-                    else if (type==='restaurant') return <RestaurantsPreview key={item._id} restaurant={item}/>
+                    else if (type==='restaurant') return <RestaurantPreview key={item._id} restaurant={item}/>
                     else return <div></div>
                 })}
             </div>
