@@ -6,6 +6,7 @@ import { RestaurantFilter } from "../cmps/restaurant-filter";
 import { useEffect, useState } from "react";
 import { store } from "../store/store";
 import { SET_IS_SCREEN } from "../store/restaurant/restaurant.reducer";
+import { FilterMapBtns } from "../cmps/filter-map-btns";
 
 export function Restaurants() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
@@ -16,12 +17,13 @@ export function Restaurants() {
     useEffect(() => {
         store.dispatch({ type: SET_IS_SCREEN, isScreen: isFilterOpen })
     }, [isFilterOpen])
-    
+
     return (
         <>
             {isLoading && <Loader />}
             {!isLoading &&
                 (<div className="restaurants">
+                    <FilterMapBtns setIsFilterOpen={setIsFilterOpen} />
                     <div className="restauranst-title-container">
                         <span className="restaurants-title">
                             Restaurants <span className="restaurants-title-tail">near me</span>

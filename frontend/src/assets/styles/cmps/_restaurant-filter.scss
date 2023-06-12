@@ -46,7 +46,7 @@
     position: fixed;
     z-index: 9991;
     border-radius: 1rem;
-    height: 75vh;
+    max-height: 75vh;
     width: 100%;
     max-width: 100% !important;
     background-color: rgb(255, 255, 255);
@@ -62,7 +62,7 @@
 
     @include for-mobile-layout() {
         &::-webkit-scrollbar {
-            display: none ;
+            display: none;
         }
     }
 
@@ -162,17 +162,20 @@
         flex-direction: column;
 
         .filter-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             line-height: 2.5rem;
             font-weight: 600;
             margin: 0px;
             padding: 1rem;
             font-family: Omnes-Bold;
+
+            @include for-normal-layout() {
+                font-size: 2rem;
+            }
         }
 
         .filter-content {
             max-height: 8rem;
-
             margin: 0px;
             padding: 1rem;
             padding-right: 0;
@@ -220,7 +223,7 @@
                 }
 
                 .filter-tag {
-                    font-size: 0.875rem;
+                    font-size: 1.25rem;
                     line-height: 1.25rem;
                     font-style: normal;
                     font-stretch: normal;
@@ -233,10 +236,19 @@
                     text-transform: capitalize;
                     white-space: nowrap;
                     cursor: pointer;
+                    font-family: Omnes-Medium;
 
                     &.active {
                         color: $clr1;
                         background-color: $clr2;
+                    }
+
+                    @include for-narrow-layout() {
+                        font-size: 1rem;
+                    }
+
+                    @include for-normal-layout() {
+                        font-size: 0.875rem;
                     }
                 }
             }
@@ -309,9 +321,10 @@
             gap: 0.5rem;
 
             .price-tag {
-                font-size: 0.875rem;
+                font-size: 1.25rem;
                 line-height: 1.25rem;
                 font-weight: 500;
+                font-family: Omnes-Medium;
                 background: $clr3;
                 padding: 0.375rem 0.75rem;
                 border-radius: 1rem;
@@ -319,6 +332,14 @@
                 transition: background 100ms linear 0s, color 100ms linear 0s, outline 100ms linear 0s;
                 white-space: nowrap;
                 cursor: pointer;
+
+                @include for-narrow-layout() {
+                    font-size: 1rem;
+                }
+
+                @include for-normal-layout() {
+                    font-size: 0.875rem;
+                }
 
                 &.active {
                     color: $clr1;
@@ -370,9 +391,10 @@
             }
 
             .sort-tag {
-                font-size: 0.875rem;
+                font-size: 1.25rem;
                 line-height: 1.25rem;
                 font-weight: 500;
+                font-family: Omnes-Medium;
                 outline: none;
                 border: 2px solid rgba(32, 33, 37, 0.12);
                 padding: 0px 0.75rem;
@@ -396,6 +418,14 @@
                     background-color: $clr3;
                     border-color: $clr2;
                 }
+
+                @include for-narrow-layout() {
+                    font-size: 1rem;
+                }
+
+                @include for-normal-layout() {
+                    font-size: 0.875rem;
+                }
             }
         }
     }
@@ -417,7 +447,7 @@
 
         .filter-action-btn {
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.25rem;
             line-height: 1.5rem;
             font-weight: 700;
             background-color: $clr3;
@@ -428,7 +458,7 @@
             width: calc(100% - 2rem);
             border-radius: 0.5rem;
             cursor: pointer;
-            padding: 1rem;
+            padding: 1.25rem;
             margin: 0 1rem 1rem;
             transition: box-shadow 120ms ease-in 0s;
             box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.75rem 0px, rgba(0, 0, 0, 0.12) 0px 0.75rem 0.75rem 0px;
@@ -440,6 +470,11 @@
             &.active {
                 background-color: $clr2;
                 color: $clr1;
+            }
+
+            @include for-narrow-layout(){
+                font-size: 1rem;
+                padding: 1rem;
             }
         }
     }

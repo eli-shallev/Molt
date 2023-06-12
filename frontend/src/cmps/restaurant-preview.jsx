@@ -31,7 +31,7 @@ export function RestaurantPreview({ restaurant }) {
                     </span>
                 </div>
                 <div className="restaurant-preview-time">
-                    <span>45-55</span>
+                    <span className="restaurant-preview-time-var">45-55</span>
                     <span className="restaurant-preview-time-const">min</span>
                 </div>
             </div>

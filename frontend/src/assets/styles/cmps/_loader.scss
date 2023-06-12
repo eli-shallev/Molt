@@ -1,8 +1,16 @@
 .loader{
-    width: fit-content;
-    margin: 100px auto;
+    // position: fixed;
+    width:100px;
+    margin: 0 auto;
+    
+    // top: 50%;
+    transform: translateY(100%);
+    // left: 50%;
+    // transform: translateX(50%);
+    
 
     svg{
-        color:$clr2
+        color:$clr2;
+        width: 100%;
     }
 }

@@ -49,9 +49,13 @@
                 border-radius: 4px;
                 color: $clr2;
                 font-weight: 600;
-                padding: 4px;
+                padding: 0.75rem;
                 background-color: $clr3;
                 transition: background-color 0.2s;
+
+                @include for-narrow-layout(){
+                    padding: 0.5rem;
+                }
 
                 @include for-normal-layout() {
                     display: none;

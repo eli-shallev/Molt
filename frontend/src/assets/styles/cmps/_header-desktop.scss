@@ -6,7 +6,7 @@
     background-color: $clr1;
     height: 60px;
     position: fixed;
-    z-index: 99;
+    z-index: 10;
 
     @include for-normal-layout() {
         display: flex;

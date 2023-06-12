@@ -5,7 +5,6 @@
     .restauranst-title-container {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 17.5px;
 
         .restaurants-title {
             font-family: Omnes-Bold;
@@ -17,11 +16,7 @@
         }
 
         .fillter-container {
-            display: flex;
-            gap: 4px;
-            color: $clr2;
-            align-items: end;
-            width: max-content;
+            display: none;
 
             &:hover{
                 .fillter-icon-container{
@@ -44,6 +39,14 @@
                 border-radius: 50%;
                 cursor: pointer;
             }
+
+            @include for-narrow-layout(){
+                display: flex;
+                gap: 4px;
+                color: $clr2;
+                align-items: end;
+                width: max-content;
+            }
         }
 
         @include for-narrow-layout(){
@@ -53,6 +56,7 @@
         }
 
         @include for-normal-layout(){
+            padding-bottom: 17.5px;
             .restaurants-title-tail {
                 display: inline !important;
             }

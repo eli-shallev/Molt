@@ -7,7 +7,11 @@
     box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0.25rem 0px, rgba(0, 0, 0, 0.12) 0px 0.25rem 0.25rem 0px;
     transition: box-shadow 120ms ease-in 0s, background-color 120ms ease-in 0s;
     max-height: 60px;
-    z-index: 999;
+    z-index: 100;
+
+    @include for-normal-layout(){
+        display: none;
+    }
 
     &.top {
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);

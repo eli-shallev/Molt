@@ -2,8 +2,6 @@ import { VscHome } from 'react-icons/vsc';
 import { BiChevronDown } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
 
-
-
 export function HeaderDesktop() {
 
     const [scrollY, setScrollY] = useState()
