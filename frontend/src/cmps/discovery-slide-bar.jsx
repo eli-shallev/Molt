@@ -25,13 +25,15 @@ export function DiscoverySlideBar() {
 
     const resizeObserver = new ResizeObserver((entries) => {
         for (const entry of entries) {
-            console.log(entry.target)
             if (entry.target.clientWidth > 700) {
                 setSlidesPerView(2)
                 setPagination(false)
             } else {
                 setSlidesPerView(1)
-                setPagination(true)
+                setPagination({
+                    el: '.pagination-container',
+                    type: 'bullets',
+                  })
             }
         }
     })
@@ -127,6 +129,9 @@ export function DiscoverySlideBar() {
                     </div>
                 </SwiperSlide>
             </Swiper>
+            <div className={`pagination-container ${pagination?'':'hidden'}`}>
+
+            </div>
         </div>
     )
 }

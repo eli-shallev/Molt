@@ -2,11 +2,21 @@ import { useSelector } from "react-redux";
 import { SlideList } from "../cmps/slide-list";
 import { Loader } from "../cmps/loader";
 import { FullList } from "../cmps/full-list";
+import { RestaurantFilter } from "../cmps/restaurant-filter";
+import { useEffect, useState } from "react";
+import { store } from "../store/store";
+import { SET_IS_SCREEN } from "../store/restaurant/restaurant.reducer";
 
 export function Restaurants() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
     const categories = useSelector((storeState) => storeState.categoryModule.categories)
     const isLoading = useSelector((storeState) => storeState.restaurantModule.isLoading)
+    const [isFilterOpen, setIsFilterOpen] = useState(false)
+
+    useEffect(() => {
+        store.dispatch({ type: SET_IS_SCREEN, isScreen: isFilterOpen })
+    }, [isFilterOpen])
+    
     return (
         <>
             {isLoading && <Loader />}
@@ -16,7 +26,7 @@ export function Restaurants() {
                         <span className="restaurants-title">
                             Restaurants <span className="restaurants-title-tail">near me</span>
                         </span>
-                        <div className="fillter-container">
+                        <div onClick={() => { setIsFilterOpen(true) }} className="fillter-container">
                             <span className="fillter-title">Sorted by <strong>Recommended</strong></span>
                             <div className="fillter-icon-container">
                                 <svg viewBox="0 0 20 21" fill="currentColor" >
@@ -27,6 +37,14 @@ export function Restaurants() {
                     </div>
                     <SlideList title='I fell like eating..' items={categories} type='category' />
                     <FullList title='All restaurants' items={restaurants} type='restaurant' />
+                    {isFilterOpen && (
+                        <RestaurantFilter
+                            isFilterOpen={isFilterOpen}
+                            setIsFilterOpen={setIsFilterOpen}
+                            restaurants={restaurants}
+                            categories={categories}
+                        />
+                    )}
                 </div>)}
         </>
     )

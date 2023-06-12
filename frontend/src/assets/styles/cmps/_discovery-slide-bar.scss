@@ -2,6 +2,7 @@
     width: 100vw;
     margin-left: calc(0px - $padding-mobile);
     position: relative;
+    margin-top: 2rem;
 
     @include for-normal-layout() {
         margin-left: calc(0px - $padding-normal);
@@ -85,7 +86,7 @@
         }
 
         &.next-container {
-            right: 16px;
+            right: 8px;
         }
     }
 
@@ -112,4 +113,19 @@
             background-color: $clr9;
         }
     }
+
+    .pagination-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.hidden{
+            display: none;
+        }
+    }
+
+    
+}
+.swiper-pagination-bullet-active{
+    background-color: gray;
 }

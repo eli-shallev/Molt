@@ -6,6 +6,7 @@ import { Discovery } from './views/discovery';
 import { HeaderDesktop } from './cmps/header-desktop';
 import { NavBar } from './cmps/nav-bar';
 import { Restaurants } from './views/restaurants';
+import {Screen} from './cmps/screen'; 
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="main-layout app">
+          <Screen/>
           <HeaderDesktop />
           <main className='main-layout'>
           <NavBar />

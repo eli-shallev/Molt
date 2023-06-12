@@ -3,27 +3,38 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+html {
     font-size: 12px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    @include for-wide-layout(){
+
+    @include for-normal-layout() {
         font-size: 14px;
     }
-    
+
+    @include for-wide-layout() {
+        font-size: 16px;
+    }
+
+}
+
+body {
+    margin: 0;
+
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
-    &:visited{
+
+    &:visited {
         color: inherit;
     }
 }
 
 button {
     cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 li {
@@ -45,13 +56,26 @@ object {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: $clr3;
+    width: 8px;
     -webkit-border-radius: 100px;
+    background: none;
+    transition: max-width 3s;
+    // background-clip: padding-box;
+
+    &:hover {
+        background-color: rgba(170, 170, 170, 0.4);
+        width: 16px;
+    }
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    background-color: $clr5;
-    border: 1px solid gray;
+    background-color: rgba(0, 0, 0, 0.2);
+    // border: 4px solid rgba(0, 0, 0, 0.2);
     -webkit-border-radius: 100px;
+    background-clip: padding-box;
+
+    &:hover {
+        // background-color: #aaa;
+        border: 8px solid #aaa;
+    }
 }
