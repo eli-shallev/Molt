@@ -52,7 +52,7 @@ export function RestaurantFilter({ setIsFilterOpen, isFilterOpen, restaurants, c
     }
 
     function handleBlur(ev) {
-        // if (!ev.relatedTarget) closeFilter()
+        if (!ev.relatedTarget) closeFilter()
     }
 
     return (

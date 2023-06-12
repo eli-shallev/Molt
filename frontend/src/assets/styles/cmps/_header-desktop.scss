@@ -1,5 +1,5 @@
-.header-desktop-container{
-    display: flex;
+.header-desktop-container {
+    display: none;
     justify-content: center;
     max-width: 2000px !important;
     border-bottom: 1px solid lightgray;
@@ -7,6 +7,10 @@
     height: 60px;
     position: fixed;
     z-index: 99;
+
+    @include for-normal-layout() {
+        display: flex;
+    }
 }
 
 .header-desktop {
@@ -44,7 +48,7 @@
             border-bottom: 1px solid lightgrey;
             box-shadow: 10px 0 -10px 0 $clr1;
             width: 100%;
-            transition:all 1s;
+            transition: all 1s;
 
             &.scrolled {
                 transform: translateY(-60px);
@@ -128,7 +132,7 @@
                 border: 2px solid $clr2;
             }
 
-            .search-icon-container{
+            .search-icon-container {
                 width: 14px;
                 height: 14px;
             }
@@ -145,7 +149,7 @@
                     outline: none;
                 }
 
-                &::placeholder{
+                &::placeholder {
                     font-size: 12px;
                     color: $clr6;
                     font-weight: 400;

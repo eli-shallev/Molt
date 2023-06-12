@@ -1,4 +1,3 @@
-import { FiSearch } from 'react-icons/fi';
 import { VscHome } from 'react-icons/vsc';
 import { BiChevronDown } from 'react-icons/bi';
 import { useEffect, useState } from 'react';
