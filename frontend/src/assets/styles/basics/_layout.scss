@@ -33,15 +33,14 @@
     main {
         flex-grow: 1;
         width: 100%;
-        padding-top: 40px;
+        padding-top: 60px;
 
-        @include for-narrow-layout(){
+        @include for-normal-layout(){
             padding-top: 120px;
         }
 
         @include for-wide-layout() {
             padding-top: 60px;
         }
-
     }
 }

@@ -8,6 +8,7 @@ import { NavBar } from './cmps/nav-bar';
 import { Restaurants } from './views/restaurants';
 import { Screen } from './cmps/screen';
 import { HeaderMobile } from './cmps/header-mobile';
+import { SeeAll } from './views/see-all';
 
 
 function App() {
@@ -16,14 +17,15 @@ function App() {
       <Router>
         <div className="main-layout app">
           <Screen />
-          <HeaderDesktop />
-          <HeaderMobile />
+          {/* <HeaderDesktop />
+          <HeaderMobile /> */}
           <main className='main-layout'>
             <NavBar />
             <Routes>
               <Route path="/" element={<Discovery />} />
               <Route path="/discovery" element={<Discovery />} />
               <Route path="/restaurants" element={<Restaurants />} />
+              <Route path="/seeall" element={<SeeAll />} />
             </Routes>
           </main>
         </div>

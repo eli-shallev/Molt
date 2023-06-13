@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { store } from "../store/store";
 import { SET_IS_SCREEN } from "../store/restaurant/restaurant.reducer";
 import { FilterMapBtns } from "../cmps/filter-map-btns";
+import { HeaderMobile } from "../cmps/header-mobile";
+import { HeaderDesktop } from "../cmps/header-desktop";
 
 export function Restaurants() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
@@ -20,6 +22,8 @@ export function Restaurants() {
 
     return (
         <>
+            <HeaderDesktop />
+            <HeaderMobile />
             {isLoading && <Loader />}
             {!isLoading &&
                 (<div className="restaurants">
