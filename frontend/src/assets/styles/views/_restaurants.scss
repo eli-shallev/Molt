@@ -40,7 +40,7 @@
                 cursor: pointer;
             }
 
-            @include for-narrow-layout(){
+            @include for-normal-layout(){
                 display: flex;
                 gap: 4px;
                 color: $clr2;

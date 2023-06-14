@@ -12,13 +12,13 @@
     top: 0;
     left: 0;
 
+    @include for-normal-layout() {
+        display: none !important;
+    }
+
     &.no-loc {
         display: flex;
         align-items: center;
-    }
-
-    @include for-normal-layout() {
-        display: none;
     }
 
     &.top {

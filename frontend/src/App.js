@@ -9,6 +9,7 @@ import { Restaurants } from './views/restaurants';
 import { Screen } from './cmps/screen';
 import { HeaderMobile } from './cmps/header-mobile';
 import { SeeAll } from './views/see-all';
+import { CategoryView } from './views/category-view';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/discovery" element={<Discovery />} />
               <Route path="/restaurants" element={<Restaurants />} />
               <Route path="/seeall" element={<SeeAll />} />
+              <Route path="/category-view" element={<CategoryView />} />
             </Routes>
           </main>
         </div>

@@ -24,7 +24,7 @@
         grid-auto-flow: dense;
         gap: 1rem;
 
-        &.restautant {
+        &.restaurant {
             grid-template-columns: repeat(1, minmax(0px, 1fr));
 
             @include for-normal-layout() {

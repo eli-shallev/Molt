@@ -1,0 +1,24 @@
+.category-view {
+
+    .category-view-back-btn {
+        position: fixed;
+        left: 1rem;
+        top: 0.75rem;
+        border-radius: 50%;
+        background-color: $clr8;
+        z-index: 999;
+        padding: 0.75rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+        @include for-normal-layout(){
+            display: none;
+        }
+    }
+
+    .full-list-title{
+        font-family: Omnes-Bold !important;
+        font-size: 3rem !important;
+    }
+}

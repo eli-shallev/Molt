@@ -10,12 +10,16 @@
     min-width: calc((100% - $list-gap * 2) / 3);
     scroll-snap-align: start;
 
-    @include for-normal-layout() {
+    @include for-narrow-layout() {
         min-width: calc((100% - $list-gap * 3) / 4);
     }
 
-    @include for-wide-layout() {
+    @include for-normal-layout() {
         min-width: calc((100% - $list-gap * 4) / 5);
+    }
+
+    @include for-wide-layout() {
+        min-width: calc((100% - $list-gap * 5) / 6);
     }
 
     &:hover {
