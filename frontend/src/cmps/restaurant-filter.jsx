@@ -7,7 +7,6 @@ export function RestaurantFilter({ setIsFilterOpen, isFilterOpen, restaurants, c
     const [isScrollTop, setIsScrollTop] = useState(true)
     const [isScrollBottom, setIsScrollBottom] = useState(true)
 
-
     const filterRef = useRef()
 
     useEffect(() => {

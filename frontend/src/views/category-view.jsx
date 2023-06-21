@@ -1,9 +1,11 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { FilterMapBtns } from "../cmps/filter-map-btns";
+
 import { HeaderDesktop } from "../cmps/header-desktop";
 import { HeaderMobile } from "../cmps/header-mobile";
-import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { FullList } from "../cmps/full-list";
+
+import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { FilterMapBtns } from "../cmps/filter-map-btns";
 
 export function CategoryView() {
     const { state } = useLocation()

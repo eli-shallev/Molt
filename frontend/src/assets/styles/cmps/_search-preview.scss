@@ -1,0 +1,64 @@
+.search-preview {
+    padding: 0.625rem;
+    margin: 0.625rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .search-preview-img{
+        width: 8.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .search-preview-content {
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+
+        .search-preview-title {
+            min-height: 1.5rem;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            color: $clr11;
+        }
+
+        .search-preview-sub-title {
+            min-height: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $clr12;
+        }
+
+        .search-preview-content-footer {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+
+            .search-preview-price-range {
+
+                .price-range-full {
+                    color: $clr12;
+                }
+
+                .price-range-empty {
+                    color: $clr13;
+                }
+            }
+
+            .search-preview-address {
+                color: $clr14;
+            }
+        }
+    }
+
+    &:hover{
+        .search-preview-title {
+            color: $clr2;
+        }
+    }
+}

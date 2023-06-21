@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
+
 import { FullList } from "../cmps/full-list";
 import { HeaderMobile } from "../cmps/header-mobile";
+
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 
 export function SeeAll() {

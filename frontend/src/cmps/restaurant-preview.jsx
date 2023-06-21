@@ -1,8 +1,6 @@
-import { useSelector } from "react-redux"
 import { restauranstService } from "../services/restaurant.service"
 
 export function RestaurantPreview({ restaurant }) {
-
     function priceRangeFull() {
         let ans = ''
         for (let index = 0; index < restaurant.priceRange; index++) {
@@ -10,6 +8,7 @@ export function RestaurantPreview({ restaurant }) {
         }
         return ans
     }
+
     function priceRangeEmpty() {
         let ans = ''
         for (let index = 0; index < (4 - restaurant.priceRange); index++) {

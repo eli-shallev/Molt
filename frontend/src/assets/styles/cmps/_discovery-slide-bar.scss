@@ -2,10 +2,14 @@
     width: 100vw;
     margin-left: calc(0px - $padding-mobile);
     position: relative;
-    margin-top: 2rem;
+
+    @include for-narrow-layout() {
+        margin-top: 1rem;
+    }
 
     @include for-normal-layout() {
         margin-left: calc(0px - $padding-normal);
+        margin-top: 2rem;
     }
 
     @include for-wide-layout() {
@@ -114,18 +118,22 @@
         }
     }
 
-    .pagination-container{
+    .pagination-container {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        &.hidden{
+        &.hidden {
             display: none;
         }
     }
-
-    
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+}
+
+.swiper-pagination-bullet-active {
     background-color: gray;
 }

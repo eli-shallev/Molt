@@ -1,6 +1,7 @@
 import { useRef } from "react"
-import { CategoryPreview } from "./category-preview"
 import { useNavigate } from "react-router-dom";
+
+import { CategoryPreview } from "./category-preview"
 
 export function SlideList({ title, items, type }) {
     const navigate = useNavigate()

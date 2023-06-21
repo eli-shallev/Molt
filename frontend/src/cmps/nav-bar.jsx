@@ -6,7 +6,7 @@ import { loadRestaurants } from '../store/restaurant/restaurant.action';
 import { CgProfile } from 'react-icons/cg';
 
 export function NavBar() {
-
+    
     useEffect(() => {
         loadRestaurants()
         loadCategories()

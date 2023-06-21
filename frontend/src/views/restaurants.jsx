@@ -1,14 +1,16 @@
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+
+import { store } from "../store/store";
+import { SET_IS_SCREEN } from "../store/restaurant/restaurant.reducer";
+
 import { SlideList } from "../cmps/slide-list";
 import { Loader } from "../cmps/loader";
 import { FullList } from "../cmps/full-list";
 import { RestaurantFilter } from "../cmps/restaurant-filter";
-import { useEffect, useState } from "react";
-import { store } from "../store/store";
-import { SET_IS_SCREEN } from "../store/restaurant/restaurant.reducer";
-import { FilterMapBtns } from "../cmps/filter-map-btns";
 import { HeaderMobile } from "../cmps/header-mobile";
 import { HeaderDesktop } from "../cmps/header-desktop";
+import { FilterMapBtns } from "../cmps/filter-map-btns";
 
 export function Restaurants() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
@@ -27,7 +29,7 @@ export function Restaurants() {
             {isLoading && <Loader />}
             {!isLoading &&
                 (<div className="restaurants">
-                    <FilterMapBtns setIsFilterOpen={setIsFilterOpen} />
+                    <FilterMapBtns setIsFilterOpen={setIsFilterOpen} />                
                     <div className="restauranst-title-container">
                         <span className="restaurants-title">
                             Restaurants <span className="restaurants-title-tail">near me</span>

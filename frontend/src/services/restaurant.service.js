@@ -252,9 +252,9 @@ function _createDemoData() {
             },
             {
                 _id: utilService.makeId(),
-                title: 'mhooka',
+                title: 'mhooka-s',
                 subTitle: 'Asian Kitchen - Kosher',
-                description: 'Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
+                description: 'boogy Mhookas rich cuisine combines classic Thai dishes with the latest cuisines from Japan and China. The dishes are serve straight from the hot wok to your plate and the fresh sushi - a work of art from the freshes Ingredients. The raw materials at Mhooka are among the highest quality in the global Asian food industry and our priority will always be uncompromising freshness. Kosher by Chief Rabbinate Jerusalem',
                 address: {
                     street: 'Derech Agudat Sport Beitar',
                     number: '1',

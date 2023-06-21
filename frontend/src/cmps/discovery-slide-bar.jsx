@@ -10,7 +10,6 @@ export function DiscoverySlideBar() {
     const discoveryRef = useRef()
     const [prevEl, setPrevEl] = useState(null)
     const [nextEl, setNextEl] = useState(null)
-
     const [slidesPerView, setSlidesPerView] = useState(2)
     const [pagination, setPagination] = useState(false)
 
@@ -33,7 +32,7 @@ export function DiscoverySlideBar() {
                 setPagination({
                     el: '.pagination-container',
                     type: 'bullets',
-                  })
+                })
             }
         }
     })
@@ -129,9 +128,7 @@ export function DiscoverySlideBar() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            <div className={`pagination-container ${pagination?'':'hidden'}`}>
-
-            </div>
+            <div className={`pagination-container ${pagination ? '' : 'hidden'}`}></div>
         </div>
     )
 }

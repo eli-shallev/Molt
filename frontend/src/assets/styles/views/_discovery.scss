@@ -1,4 +1,14 @@
-.discovery{
+.discovery {
     padding: 0 !important;
     height: 200vh;
+
+    .dicovery-head-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include for-normal-layout() {
+            display: none;
+        }
+    }
 }
