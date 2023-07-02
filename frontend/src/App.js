@@ -11,6 +11,7 @@ import { HeaderMobile } from './cmps/header-mobile';
 import { SeeAll } from './views/see-all';
 import { CategoryView } from './views/category-view';
 import { DesktopSearchResults } from './views/desktop-search-results';
+import { SearchMobile } from './views/search-mobile';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
               <Route path="/restaurants" element={<Restaurants />} />
               <Route path="/seeall" element={<SeeAll />} />
               <Route path="/search" element={<DesktopSearchResults />} />
+              <Route path="/search-mobile" element={<SearchMobile />} />
               <Route path="/category-view" element={<CategoryView />} />
             </Routes>
           </main>

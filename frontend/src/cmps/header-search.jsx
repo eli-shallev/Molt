@@ -54,7 +54,7 @@ export function HeaderSearch() {
     // }
 
     function handleBlur() {
-        setTimeout(() => setIsListVisible(false), 100)
+        // setTimeout(() => setIsListVisible(false), 100)
     }
 
     return (

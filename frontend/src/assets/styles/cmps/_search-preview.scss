@@ -1,20 +1,52 @@
 .search-preview {
-    padding: 0.625rem;
-    margin: 0.625rem;
+    // margin: 2rem 0;
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
 
-    .search-preview-img{
-        width: 8.5rem;
+    @include for-normal-layout() {
+        padding: 0.625rem;
+        margin: 0.625rem;
+    }
+
+    .search-preview-img-container {
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 0.25rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include for-normal-layout() {
+            width: 6.5rem;
+        }
+    }
+
+    .search-preview-img {
+        width: 180%;
+        border-radius: 0.25rem;
+        max-width: none;
+
+        @include for-normal-layout() {
+            width: auto;
+            height: 100%;
+        }
     }
 
     .search-preview-content {
         display: flex;
         flex-direction: column;
         text-transform: capitalize;
+        border-bottom: 1px solid $clr7;
+        flex-grow: 1;
+        padding: 1rem 0;
+
+        @include for-normal-layout() {
+            border: none;
+            padding: 0;
+        }
 
         .search-preview-title {
             min-height: 1.5rem;
@@ -35,9 +67,32 @@
         .search-preview-content-footer {
             display: flex;
             gap: 0.5rem;
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 1.25rem;
             font-weight: 400;
+
+            @include for-normal-layout() {
+                font-size: 0.875rem;
+
+            }
+
+            .search-preview-delivery {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                .delivery-icon-container {
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+
+                    @include for-normal-layout() {
+                        width: 0.875rem;
+                        height: 0.875rem;
+                    }
+                }
+            }
 
             .search-preview-price-range {
 
@@ -52,11 +107,38 @@
 
             .search-preview-address {
                 color: $clr14;
+                display: none;
+
+                @include for-normal-layout() {
+                    display: inline;
+                }
+            }
+
+            .search-preview-rating {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                @include for-normal-layout() {
+                    display: none;
+                }
+
+                .rating-icon-container {
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+
+                    @include for-narrow-layout() {
+                        width: 0.875rem;
+                        height: 0.875rem;
+                    }
+                }
             }
         }
     }
 
-    &:hover{
+    &:hover {
         .search-preview-title {
             color: $clr2;
         }
