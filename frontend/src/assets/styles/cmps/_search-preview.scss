@@ -1,5 +1,4 @@
 .search-preview {
-    // margin: 2rem 0;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -73,13 +72,13 @@
 
             @include for-normal-layout() {
                 font-size: 0.875rem;
-
             }
 
             .search-preview-delivery {
                 display: flex;
                 align-items: center;
                 gap: 4px;
+                color: $clr12;
 
                 .delivery-icon-container {
                     width: 1rem;

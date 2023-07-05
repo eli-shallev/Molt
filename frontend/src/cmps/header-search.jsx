@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { SearchList } from "./search-list"
 import { useNavigate } from "react-router-dom"
+import { RecentSearchList } from "./recent-search-list"
 
 export function HeaderSearch() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
@@ -14,14 +15,7 @@ export function HeaderSearch() {
 
     useEffect(() => {
         if (keyWord !== '') {
-            const filteredRestaurantsToSet = restaurants.filter(restaurant => {
-                return (
-                    restaurant.title.toLowerCase().includes(keyWord.toLowerCase()) ||
-                    restaurant.subTitle.toLowerCase().includes(keyWord.toLowerCase()) ||
-                    restaurant.description.toLowerCase().includes(keyWord.toLowerCase())
-                )
-            })
-            setFilteredRestaurants(filteredRestaurantsToSet)
+            setFilteredRestaurants(getrFilteredResult(keyWord))
         }
         else {
             setFilteredRestaurants([])
@@ -32,29 +26,27 @@ export function HeaderSearch() {
         setKeyWord(prev => target.value)
     }
 
-    function handleSubmit(event) {
-        event?.preventDefault()
-        if (keyWord !== '') navigate('/search', { state: { items: filteredRestaurants } })
-        setKeyWord('')
+    function getrFilteredResult(keyWord) {
+        return restaurants.filter(restaurant => {
+            return (
+                restaurant.title.toLowerCase().includes(keyWord.toLowerCase()) ||
+                restaurant.subTitle.toLowerCase().includes(keyWord.toLowerCase()) ||
+                restaurant.description.toLowerCase().includes(keyWord.toLowerCase())
+            )
+        })
     }
 
-    // function handleFocus() {
-    //     elRef.current.addEventListener('keypress', handlePress)
-    // }
-
-    // function handlePress(event) {
-    //     if (event.key === 'Enter' && inputRef.current.value !== '') {
-    //         console.log(getFilteredRestaurants())
-    //         //navigate('/search', { state: { items: filteredRestaurants } })
-    //     }
-    // }
-
-    // function getFilteredRestaurants() {
-    //     return filteredRestaurants
-    // }
+    function handleSubmit(event) {
+        event?.preventDefault()
+        if (keyWord !== '') {
+            navigate('/search', { state: { items: filteredRestaurants } })
+            setIsListVisible(false)
+            setKeyWord('')
+        }
+    }
 
     function handleBlur() {
-        // setTimeout(() => setIsListVisible(false), 100)
+        setTimeout(() => setIsListVisible(false), 100)
     }
 
     return (
@@ -83,7 +75,9 @@ export function HeaderSearch() {
                     </div>
                 )}
             </div>
+            {keyWord === '' && isListVisible && <RecentSearchList getrFilteredResult={getrFilteredResult} />}
             {keyWord !== '' && isListVisible && <SearchList items={filteredRestaurants} handleSubmit={handleSubmit} />}
+
         </>
     )
 }

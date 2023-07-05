@@ -14,6 +14,7 @@
 @import './views/see-all';
 @import './views/category-view';
 @import './views/search-mobile';
+@import './views/desktop-search-results';
 
 //CMPS
 @import './cmps/header-desktop';
@@ -32,3 +33,4 @@
 @import './cmps/search-preview';
 @import './cmps/header-search';
 @import './cmps/search-list-mobile';
+@import './cmps/recent-search-list';

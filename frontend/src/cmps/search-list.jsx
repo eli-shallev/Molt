@@ -22,7 +22,7 @@ export function SearchList({ items, handleSubmit }) {
         <div className="search-list">
             <div className="svg-container">
                 <svg viewBox="0 0 32 16" >
-                    {/* <path d="M 16,0 L32,16 H0 Z" className="arrow-shadow"></path> */}
+                    <path d="M 16,0 L32,16 H0 Z" className="arrow-shadow"></path>
                     <path d="M 16,1 L31,16 H1 Z"></path>
                 </svg>
             </div>

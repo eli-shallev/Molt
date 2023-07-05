@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { VscHome } from 'react-icons/vsc';
 import { BiChevronDown } from 'react-icons/bi';
 import { HeaderSearch } from './header-search';
+import { userService } from '../services/user.service';
 
 export function HeaderDesktop() {
 
@@ -46,7 +47,7 @@ export function HeaderDesktop() {
                 <div className="header-right">
                     <div className="header-user-btn">
                         <div className="header-user-img-container">
-                            <img src="https://api.multiavatar.com/user.png" alt="" />
+                            <img src={userService.getLoggedinUser().imgUrl} alt="" />
                         </div>
                         <BiChevronDown />
                     </div>

@@ -1,0 +1,95 @@
+.recent-search-list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    width: 35rem;
+    max-width: 100vw;
+    max-height: calc(100vh - 4.375rem);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 1px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0.25rem 0px, rgba(0, 0, 0, 0.12) 0px 0.25rem 0.25rem 0px;
+    background-color: $clr1;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+
+    .svg-container {
+        position: absolute;
+        top: -0.7rem;
+        width: 1.5rem;
+        left: calc(50% - 0.75rem);
+        // height: 3.5rem;
+        height: min-content;
+        display: flex;
+        align-items: center;
+
+        svg {
+            filter: drop-shadow(rgba(0, 0, 0, 0.09) 0px 0px 2px);
+            fill: $clr1;
+
+            .arrow-shadow {
+                fill: rgb(210, 210, 210) !important;
+            }
+        }
+    }
+
+    .recent-search-list-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+
+        .recent-search-list-header-title {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+            font-family: Omnes-Medium;
+        }
+
+        .recent-search-list-header-btn {
+            background: none;
+            border: none;
+            color: $clr2;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .recent-search-list-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-top: 1px solid $clr7;
+
+        .search-icon-container {
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                fill: $clr12;
+            }
+        }
+
+        .recent-search-list-term {
+            padding: 0px 1rem;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $clr2;
+
+            .search-icon-container {
+                svg {
+                    fill: $clr2;
+                }
+            }
+        }
+    }
+}

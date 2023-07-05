@@ -13,6 +13,8 @@ import { CategoryView } from './views/category-view';
 import { DesktopSearchResults } from './views/desktop-search-results';
 import { SearchMobile } from './views/search-mobile';
 
+import { userService } from './services/user.service';
+
 
 function App() {
   return (
