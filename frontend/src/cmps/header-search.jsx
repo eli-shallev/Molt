@@ -3,9 +3,12 @@ import { useSelector } from "react-redux"
 import { SearchList } from "./search-list"
 import { useNavigate } from "react-router-dom"
 import { RecentSearchList } from "./recent-search-list"
+import { updateRecentSearches } from "../store/user/user.action"
+import { userService } from "../services/user.service"
 
 export function HeaderSearch() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
+    const user = useSelector((storeState) => storeState.userModule.user)
     const [filteredRestaurants, setFilteredRestaurants] = useState([])
     const [keyWord, setKeyWord] = useState('')
     const [isListVisible, setIsListVisible] = useState(false)
@@ -39,6 +42,7 @@ export function HeaderSearch() {
     function handleSubmit(event) {
         event?.preventDefault()
         if (keyWord !== '') {
+            updateRecentSearches(user._id, keyWord)
             navigate('/search', { state: { items: filteredRestaurants } })
             setIsListVisible(false)
             setKeyWord('')

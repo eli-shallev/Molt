@@ -9,6 +9,7 @@
     background-color: $clr1;
     position: absolute;
     top: calc(100% + 0.75rem);
+    overflow: auto;
 
     .svg-container {
         position: absolute;

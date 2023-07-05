@@ -13,6 +13,7 @@ export const userService = {
     getUsers,
     getById,
     getRecentOrders,
+    updateUser,
     // remove,
     // update,
     // changeScore
@@ -32,6 +33,11 @@ async function signup(userCred) {
     userCred._id = utilService.makeId()
     const user = await storageService.post('user', userCred)
     return saveLocalUser(user)
+}
+
+async function updateUser(user) {
+    const updatedUser = await storageService.put('user', user)
+    return saveLocalUser(updatedUser)
 }
 
 function saveLocalUser(user) {
@@ -56,10 +62,10 @@ function _createDemoData() {
     }
 }
 
-function getRecentOrders(){
+function getRecentOrders() {
     const recentOrders = []
-    getLoggedinUser().recentOrders.forEach(id=>{
-        const rest = restauranstService.getById(id).then(res=>res)
+    getLoggedinUser().recentOrders.forEach(id => {
+        const rest = restauranstService.getById(id).then(res => res)
         recentOrders.push(rest)
     })
     return recentOrders

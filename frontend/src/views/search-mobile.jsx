@@ -5,20 +5,24 @@ import { SearchListMobile } from "../cmps/search-list-mobile"
 import { userService } from "../services/user.service"
 import { restauranstService } from "../services/restaurant.service"
 import { Loader } from "../cmps/loader"
+import { updateRecentSearches } from "../store/user/user.action"
 
 export function SearchMobile() {
     const categories = useSelector((storeState) => storeState.categoryModule.categories)
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
     const isLoading = useSelector((storeState) => storeState.restaurantModule.isLoading)
+    const user = useSelector((storeState) => storeState.userModule.user)
     const [filteredRestaurants, setFilteredRestaurants] = useState([])
     const [keyWord, setKeyWord] = useState('')
     const [isRecentListVisible, setIsRecentListVisible] = useState(false)
     const [isScrollTop, setIsScrollTop] = useState(true)
     const navigate = useNavigate()
-    const user = userService.getLoggedinUser()
 
     useEffect(() => {
         if (keyWord !== '') {
+            (async () => {
+                await updateRecentSearches(user._id, keyWord)
+            })()
             const filteredRestaurantsToSet = restaurants.filter(restaurant => {
                 return (
                     restaurant.title.toLowerCase().includes(keyWord.toLowerCase()) ||
@@ -95,7 +99,7 @@ export function SearchMobile() {
                         <>
                             <div className="recent-search-list-header">
                                 <span className="recent-search-list-header-title">Recent searches</span>
-                                <button className="recent-search-list-header-btn">Clear</button>
+                                <button onClick={() => updateRecentSearches(user._id)} className="recent-search-list-header-btn">Clear</button>
                             </div>
 
                             {user.recentSearches.map((search, index) => {

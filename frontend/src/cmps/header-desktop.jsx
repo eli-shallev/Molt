@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { VscHome } from 'react-icons/vsc';
 import { BiChevronDown } from 'react-icons/bi';
 import { HeaderSearch } from './header-search';
-import { userService } from '../services/user.service';
+import { useSelector } from 'react-redux';
 
 export function HeaderDesktop() {
-
+    const user = useSelector((storeState) => storeState.userModule.user)
     const [scrollY, setScrollY] = useState()
 
     function handleScroll() {
@@ -47,7 +47,7 @@ export function HeaderDesktop() {
                 <div className="header-right">
                     <div className="header-user-btn">
                         <div className="header-user-img-container">
-                            <img src={userService.getLoggedinUser().imgUrl} alt="" />
+                            <img src={user.imgUrl} alt="" />
                         </div>
                         <BiChevronDown />
                     </div>

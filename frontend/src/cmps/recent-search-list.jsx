@@ -1,12 +1,18 @@
 import { useNavigate } from "react-router-dom"
-import { userService } from "../services/user.service"
+import { updateRecentSearches } from "../store/user/user.action"
+import { useSelector } from "react-redux"
 
 export function RecentSearchList({ getrFilteredResult }) {
     const navigate = useNavigate()
-    const user = userService.getLoggedinUser()
+    const user = useSelector((storeState) => storeState.userModule.user)
 
     function handleClick(keyWord) {
+        updateRecentSearches(user._id, keyWord)
         navigate('/search', { state: { items: getrFilteredResult(keyWord) } })
+    }
+
+    async function handleClear(){
+        await updateRecentSearches(user._id)
     }
     return (
         <div className="recent-search-list">
@@ -18,7 +24,7 @@ export function RecentSearchList({ getrFilteredResult }) {
             </div>
             <div className="recent-search-list-header">
                 <span className="recent-search-list-header-title">Recent searches</span>
-                <button className="recent-search-list-header-btn">Clear</button>
+                <button onClick={handleClear} className="recent-search-list-header-btn">Clear</button>
             </div>
 
             {user.recentSearches.map((search, index) => {
