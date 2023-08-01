@@ -1,0 +1,72 @@
+.favourite-list {
+    margin-top: 2rem;
+
+    .favourite-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .favourite-list-title {
+            font-family: Omnes-medium;
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            font-weight: 600;
+            color: $clr11;
+        }
+
+        .see-all-btn {
+            border: none;
+            color: $clr2;
+            font-weight: 600;
+            padding: 0.75rem;
+
+            @include for-normal-layout() {
+                background: none;
+            }
+        }
+    }
+
+    .empty-list {
+        display: flex;
+
+        .left {
+            .favourite-list-info {
+                line-height: 1.2;
+                color: $clr12;
+                max-width: 600px;
+            }
+        }
+
+        .right {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+
+            .svg-container {
+                padding-top: 0.5rem;
+            }
+        }
+    }
+
+    .favourite-list-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .restaurant-preview {
+            width: calc((900px - 1rem)/ 3);
+            height: fit-content;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc((900px - 1rem)/ 3);
+            overflow: hidden;
+            aspect-ratio: 1.088722;
+        }
+    }
+}

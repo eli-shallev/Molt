@@ -1,0 +1,32 @@
+.profile-desktop{
+    padding: 0 !important;
+    .profile-desktop-menu{
+
+        .profile-desktop-menu-header{
+            margin-bottom: 2rem;
+            .menu-header-title{
+                color: $clr11;
+                font-family: Omnes-Bold;
+                font-size: 2.875rem;
+                line-height: 3.5rem;
+                font-weight: 700;
+
+            }
+        }
+
+        .profile-desktop-menu-content{
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $clr7;
+
+            .profile-desktop-menu-item{
+                padding: 1rem 0;
+                color: $clr12;
+                font-size: 1.2rem;
+                line-height: 1.4;
+                border-top:1px solid $clr7;
+                border-bottom: 1px solid $clr7;
+            }
+        }
+    }
+}

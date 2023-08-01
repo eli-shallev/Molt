@@ -16,4 +16,8 @@
         font-family: Omnes-Bold !important;
         font-size: 3rem !important;
     }
+
+    @include for-normal-layout(){
+        padding: 2rem;
+    }
 }

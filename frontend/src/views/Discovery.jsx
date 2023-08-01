@@ -4,6 +4,7 @@ import { Loader } from "../cmps/loader"
 import { DiscoverySlideBar } from "../cmps/discovery-slide-bar"
 import { HeaderDesktop } from "../cmps/header-desktop"
 import { HeaderMobile } from "../cmps/header-mobile"
+import { NavBar } from "../cmps/nav-bar"
 
 export function Discovery() {
     const isLoading = useSelector((storeState) => storeState.restaurantModule.isLoading)
@@ -12,6 +13,7 @@ export function Discovery() {
         <>
             <HeaderDesktop />
             <HeaderMobile />
+            <NavBar/>
             {isLoading && <Loader />}
             {!isLoading &&
                 (

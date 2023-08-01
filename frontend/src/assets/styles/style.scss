@@ -15,6 +15,7 @@
 @import './views/category-view';
 @import './views/search-mobile';
 @import './views/desktop-search-results';
+@import './views/profile-desktop';
 
 //CMPS
 @import './cmps/header-desktop';
@@ -34,3 +35,15 @@
 @import './cmps/header-search';
 @import './cmps/search-list-mobile';
 @import './cmps/recent-search-list';
+@import './cmps/image-crop';
+@import './cmps/user-image-selection';
+
+@import './cmps/profile-desktop/personal-info';
+@import './cmps/profile-desktop/payment-methods';
+@import './cmps/profile-desktop/addresses';
+@import './cmps/profile-desktop/order-history';
+@import './cmps/profile-desktop/settings';
+@import './cmps/favourite-list';
+@import './cmps/order-again-list';
+@import './cmps/payment-methods';
+@import './cmps/new-card';

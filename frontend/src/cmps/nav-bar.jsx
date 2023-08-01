@@ -42,7 +42,7 @@ export function NavBar() {
                 <span>Search</span>
             </NavLink>
 
-            <NavLink className="nav-profile" to='/profile'>
+            <NavLink className="nav-profile" to='/profile-desktop'>
                 <CgProfile className='profile-icon' />
                 <span>Profile</span>
             </NavLink>

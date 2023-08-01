@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
 import { SearchListMobile } from "../cmps/search-list-mobile"
-import { userService } from "../services/user.service"
-import { restauranstService } from "../services/restaurant.service"
 import { Loader } from "../cmps/loader"
 import { updateRecentSearches } from "../store/user/user.action"
+import { NavBar } from "../cmps/nav-bar"
 
 export function SearchMobile() {
     const categories = useSelector((storeState) => storeState.categoryModule.categories)
@@ -16,7 +14,6 @@ export function SearchMobile() {
     const [keyWord, setKeyWord] = useState('')
     const [isRecentListVisible, setIsRecentListVisible] = useState(false)
     const [isScrollTop, setIsScrollTop] = useState(true)
-    const navigate = useNavigate()
 
     useEffect(() => {
         if (keyWord !== '') {
@@ -60,6 +57,7 @@ export function SearchMobile() {
 
     return (
         <>
+        <NavBar/>
             {isLoading && <Loader />}
             {!isLoading &&
                 <div className="search-mobile">

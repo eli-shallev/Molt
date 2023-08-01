@@ -6,6 +6,7 @@ import { FullList } from "../cmps/full-list";
 
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { FilterMapBtns } from "../cmps/filter-map-btns";
+import { NavBar } from "../cmps/nav-bar";
 
 export function CategoryView() {
     const { state } = useLocation()
@@ -16,6 +17,7 @@ export function CategoryView() {
             <HeaderDesktop />
             <HeaderMobile title={state.title} />
             <FilterMapBtns />
+            <NavBar/>
             <div className="category-view">
                 <div onClick={() => navigate(-1)} className="category-view-back-btn">
                     <HiArrowNarrowLeft />

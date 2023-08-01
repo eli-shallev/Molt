@@ -11,6 +11,7 @@ import { RestaurantFilter } from "../cmps/restaurant-filter";
 import { HeaderMobile } from "../cmps/header-mobile";
 import { HeaderDesktop } from "../cmps/header-desktop";
 import { FilterMapBtns } from "../cmps/filter-map-btns";
+import { NavBar } from "../cmps/nav-bar";
 
 export function Restaurants() {
     const restaurants = useSelector((storeState) => storeState.restaurantModule.restaurants)
@@ -26,6 +27,7 @@ export function Restaurants() {
         <>
             <HeaderDesktop />
             <HeaderMobile />
+            <NavBar/>
             {isLoading && <Loader />}
             {!isLoading &&
                 (<div className="restaurants">

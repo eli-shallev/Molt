@@ -1,0 +1,32 @@
+.order-again-list{
+    margin: 3rem 0;
+    
+    .order-again-list-title {
+        font-family: Omnes-medium;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+        color: $clr11;
+    }
+
+    .order-again-list-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .restaurant-preview {
+            width: calc((900px - 1rem)/ 3);
+            height: fit-content;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc((900px - 1rem)/ 3);
+            overflow: hidden;
+            aspect-ratio: 1.088722;
+        }
+    }
+}

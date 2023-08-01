@@ -24,3 +24,16 @@ export async function updateRecentSearches(userId, recentSearch) {
         throw err
     }
 }
+
+export async function updateUserImgUrl(userId,imgUrl){
+    try {
+        const user = await userService.getById(userId)
+        user.imgUrl = imgUrl
+
+        const userCreds = await userService.updateUser(user)
+        store.dispatch({ type: UPDATE_USER, user: userCreds })
+    } catch (err) {
+        console.log('Had issues updating user image', err)
+        throw err
+    }
+}

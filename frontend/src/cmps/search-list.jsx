@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom"
 import { SearchPreview } from "./search-preview"
 
 export function SearchList({ items, handleSubmit }) {
-    const navigate = useNavigate()
 
     if (!items || !items.length) return (
         <div className="search-list">

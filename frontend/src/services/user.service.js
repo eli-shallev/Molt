@@ -41,7 +41,16 @@ async function updateUser(user) {
 }
 
 function saveLocalUser(user) {
-    user = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl, recentSearches: user.recentSearches, recentOrders: user.recentOrders }
+    user = {
+        _id: user._id,
+        fullname: user.fullname,
+        imgUrl: user.imgUrl,
+        recentSearches: user.recentSearches,
+        recentOrders: user.recentOrders,
+        email: user.email,
+        phoneNumber: user.phoneNumber,
+        favorites: user.favorites
+    }
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
     return user
 }
@@ -51,10 +60,18 @@ function getLoggedinUser() {
 }
 
 function _createDemoData() {
-    console.log('ggg')
     let users = utilService.loadFromStorage('user')
     if (!users || !users.length) {
-        signup({ fullname: 'eli shallev', password: '1234', username: 'eli', recentSearches: ['asian', 'kosher', 'boby'], recentOrders: ['mres1', 'mres2'] })
+        signup({
+            fullname: 'eli shallev',
+            password: '1234',
+            username: 'eli',
+            email:'elisha@gmail.com',
+            phoneNumber: '0525040302',
+            recentSearches: ['asian', 'kosher', 'boby'],
+            recentOrders: ['mres1', 'mres2'],
+            favorites: ['mres1', 'mres2']
+        })
     } else {
         if (!getLoggedinUser()) {
             saveLocalUser(users[0])

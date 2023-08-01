@@ -1,0 +1,75 @@
+.new-card {
+    
+    background-color: $clr15;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+
+    .card-info-container {
+        background-image: url("https://res.cloudinary.com/dxajfza46/image/upload/v1690798750/molts/credit-card-bg_tjjwin.png");
+        background-size: contain;
+        border-radius: 1rem;
+        max-width: 320px;
+        margin-top: 2rem;
+        box-shadow: 0 4px 4px rgba(0,0,0,.12), 0 0 4px rgba(0,0,0,6%);
+        margin-bottom: 1rem;
+    }
+
+    .card-info {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        padding: 1rem;
+        background: linear-gradient(180deg, rgba(0, 157, 224, 0)0%, rgb(0, 157, 224) 100%);
+        color: $clr1;
+        max-width: 320px;
+
+        span {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: .625rem;
+            text-transform: uppercase;
+            letter-spacing: .12px;
+            font-weight: 500;
+        }
+
+        .card-number {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: .8rem;
+            font-weight: 500;
+        }
+
+        .card-info-wrapper {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 1rem;
+
+            .card-expiration,
+            .card-code {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                font-size: .8rem;
+                font-weight: 500;
+                width: calc((100% - 1rem) / 2);
+
+                input {}
+            }
+        }
+
+        input {
+            font-size: calc(0.8rem + (0.2 * (100vw - 20rem)) / 80);
+            padding: 1rem;
+            border-radius: 8px;
+            color: $clr11;
+            border: none;
+        }
+    }
+}

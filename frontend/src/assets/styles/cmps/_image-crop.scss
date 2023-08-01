@@ -1,0 +1,40 @@
+.image-crop {
+    .change-image {
+        display: block;
+        color: $clr2;
+        font-size: 1.07rem;
+        line-height: 1.4;
+        text-align: center;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .btns-container {
+        display: flex;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        button {
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            min-height: 3.375rem;
+            width: 100%;
+        }
+
+        .btn-save-image {
+            background-color: $clr2;
+            color: $clr1;
+            margin-left: 0.5rem;
+        }
+
+        .btn-cancel{
+            background-color: $clr3;
+            color: $clr2;
+        }
+    }
+}
