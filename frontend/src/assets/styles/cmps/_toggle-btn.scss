@@ -1,0 +1,74 @@
+.toggle-btn {
+    position: relative;
+    color: $clr1;
+    width: 7.8125rem;
+    height: 31.5px;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .opt {
+        width: 50%;
+        height: 31.5px;
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opt-left {
+        background-color: $clr2;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        opacity: 1;
+        
+    }
+
+    .opt-right {
+        background-color: #cacacb;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        opacity: 1;
+    }
+
+    .tumb {
+        position: absolute;
+        background-color: $clr1;
+        width: 3.90625rem;
+        border: 1px solid #2120251f;
+        border-radius: 0.25rem;
+        transition: all .25s ease;
+        box-shadow: 1px 1px 2px 0 #2021250f;
+        height: 35.5px;
+        top: -2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.right {
+        .tumb {
+            left: 3.90625rem;
+        }
+
+        .opt-right{
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &.left {
+        .tumb {
+            left: 0;
+            
+        }
+
+        .opt-left{
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+
+
+}

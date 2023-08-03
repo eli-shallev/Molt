@@ -72,13 +72,13 @@ export function FavouriteList({ favList }) {
                     <div className="favourite-list-content">
                         {listToDisplay.map(item => {
                             return (
-                                <RestaurantPreview restaurant={item} />
+                                <RestaurantPreview key={item._id} restaurant={item} />
                             )
                         })}
 
-                        {placeHolders().map(img => {
+                        {placeHolders().map((img, idx) => {
                             return (
-                                <div className="img-container">
+                                <div key={idx} className="img-container">
                                     {img}
                                 </div>
                             )

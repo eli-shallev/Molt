@@ -8,7 +8,7 @@ export function PaymentMethods() {
         <div className="payment-methods">
             <div className="payment-methods-content">
                 {isAddCardOpen ?
-                    <NewCard />
+                    <NewCard setIsAddCardOpen={setIsAddCardOpen} />
                     :
                     <button onClick={() => setIsAddCardOpen(true)} className="btn-add-card">
                         <svg viewBox="0 0 24 24">
