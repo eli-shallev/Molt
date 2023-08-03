@@ -19,6 +19,7 @@ import { PaymentMethods } from './cmps/profile-desktop/payment-methods';
 import { Addresses } from './cmps/profile-desktop/addresses';
 import { OrderHistory } from './cmps/profile-desktop/order-history';
 import { Settings } from './cmps/profile-desktop/settings';
+import { UserMsg } from './cmps/user-msg';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/profile-desktop/settings" element={<Settings />} />
               </Route >
             </Routes>
+            <UserMsg />
           </main>
         </div>
       </Router>
